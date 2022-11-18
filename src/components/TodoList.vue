@@ -11,7 +11,7 @@
 				@remove="removeTodo"
 			/>
 		</ul>
-		<p v-else>
+		<p class="empty-state-message" v-else>
 			Nothing left in the list. Add a new todo in the input above.
 		</p>
 	</div>
@@ -29,20 +29,7 @@ export default {
 	},
   data () {
     return {
-      todos: [
-				{
-					id: nextTodoId++,
-					text: 'Test are fun'
-				},
-				{
-					id: nextTodoId++,
-					text: 'Write tests'
-				},
-				{
-					id: nextTodoId++,
-					text: 'Write more tests'
-				}
-			]
+      todos: []
     }
   },
 	methods: {
